@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    transition: 0.5s;
+    color: darkgray;
+}
+
+.row {
+    display: flex;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.fd-column {
+    flex-direction: column;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-end {
+    justify-content: end;
+}
+
+.jc-between {
+    justify-content: space-between;
+}
+
+.jc-around {
+    justify-content: space-around;
+}
+
+.ali-center {
+    align-items: center;
+}
+
+.ali-end {
+    align-items: end;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
+}
+
+/* =========== INDEX.HTML STYLING ========= */
+
+#auth_page {
+    background: url(../imgs/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+}
+
+.auth-form label {
+    display: flex;
+    align-items: center;
+}
+
+.auth-form {
+    background-color: rgba(155, 128, 252, 0.7);
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.auth-form button,
+.auth-form input {
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border-color: rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.auth-form input:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px #007bff;
+}
+
+.auth-form button {
+    transition: 300ms;
+    min-width: 50%;
+    align-self: center;
+}
+
+.auth-form button:hover {
+    transition: 300ms;
+    background-color: #c9c9c979;
+}
+
+.auth-form h1 {
+    text-align: center;
+}
+
+/* ============= MAIN.HTML STYLING ========== */
+
+.section-welcome {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../imgs/background-2.jpg);
+    background-size: cover;
+    /* height: 100vh; */
+}
+
+.section-welcome .logo {
+    display: flex;
+    align-items: center;
+}
+
+.section-welcome .container {
+    display: flex;
+}
+
+.section-welcome .navigation {
+    padding: 20px;
+}
+
+.section-welcome .navigation ol {
+    display: flex;
+    list-style: none;
+}
+
+.section-welcome .navigation a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.section-welcome .container:nth-child(2) {
+    flex-direction: column;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    margin: 200px auto 0 auto;
+}
+
+.section-welcome .container:nth-child(2) h1 {
+    font-weight: 700;
+    font-size: 56px;
+}
+
+.section-welcome .container:nth-child(2) h2 {
+    color: rgba(226, 222, 222, 0.5);
+    padding: 0 10%;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.section-welcome .container:nth-child(2) .row {
+    margin-top: 100px;
+}
+
+.section-welcome .container:nth-child(2) .col-3 {
+    padding: 10px;
+    text-align: start;
+    color: white;
+}
+
+.section-welcome .container:nth-child(2) .row .line {
+    width: 100%;
+    height: 2px;
+    background-color: bisque;
+}
+
+.section-welcome .container:nth-child(2) .row .line::after {
+    transition: 0.5s;
+    display: block;
+    content: "";
+    width: 15%;
+    height: 2px;
+    background-color: rgb(113, 145, 252);
+}
+
+/* ============ SERVICES STYLING =========== */
+
+.section-services {
+    margin: 50px 0;
+}
+
+.section-services .item {
+    transition: 0.3s;
+    width: 15%;
+    background-color: azure;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.section-services .item:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+    transform-style: flat;
+    z-index: 10;
+}
+
+.section-services .item i {
+    font-size: 100px;
+}
+
+.section-services .item h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ========== GRID STYLING ========= */
+
+.section-grid .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px 20px;
+}
+
+.section-grid .grid .item {
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-grid .grid .item:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.section-grid .grid .item:nth-child(2) {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.section-grid .grid .item:nth-child(3) {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 3;
+}
+
+.section-grid .grid .item:nth-child(4) {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 4;
+}
+
+.section-grid .grid .item .icon {
+    width: 30%;
+    padding: 20px;
+    background-color: #cecece;
+    border-radius: 20px;
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+
+.section-grid .grid .item img {
+    width: 100%;
+}
+
+.section-grid .grid .item .txt h2 {
+    text-transform: uppercase;
+    color: #266e1f;
+    font-weight: 700;
+}
+
+.section-grid .grid .item .txt p {
+    text-transform: lowercase;
+    color: #4e4e4e;
+    font-size: 14px;
+    text-align: left;
+}
+
+/*=============== CAROUSEL STYLING ==============*/
+
+.section-carousel {
+    background-color: #dfdfdf;
+}
+
+.section-carousel .hider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.section-carousel .hider .images-line {
+    width: 300%;
+    height: 800px;
+    display: flex;
+}
+
+.section-carousel .hider .images-line .image {
+    width: calc(100%/3);
+    position: relative;
+    height: 100%;
+    animation: carousel 10s infinite alternate ease-in-out;
+}
+
+.section-carousel .hider .images-line .image {
+    animation: carousel 10s infinite alternate ease-in-out;
+}
+
+.section-carousel .hider .images-line img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.section-carousel .hider .images-line .image .info {
+    bottom: 0;
+    position: absolute;
+    padding: 20px;
+    border-radius: 30px 30px 0 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-carousel .hider .images-line .image .info>* {
+    width: 80%;
+}
+
+@keyframes carousel {
+
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+
+    40%,
+    60% {
+        transform: translateX(-100%);
+    }
+
+    80%,
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+/*=============== SLIDER STYLING ==============*/
+
+.slide {
+    background-color: #dfdfdf;
+}
+
+.slide .hider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide .hider .images-line {
+    width: 300%;
+    height: 800px;
+    display: flex;
+}
+
+.slide .hider .images-line .image {
+    width: calc(100%/3);
+    position: relative;
+    height: 100%;
+}
+
+.slide .hider .images-line img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide .hider .images-line .image .info {
+    bottom: 0;
+    position: absolute;
+    padding: 20px;
+    border-radius: 30px 30px 0 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide .hider .images-line .image .info>* {
+    width: 80%;
+}
+
+.slide input {
+    display: none;
+}
+
+#slide1:checked~.images-line .image {
+    transition: 500ms;
+    transform: translateX(0);
+}
+
+#slide2:checked~.images-line .image {
+    transition: 500ms;
+    transform: translateX(-100%);
+}
+
+#slide3:checked~.images-line .image {
+    transition: 500ms;
+    transform: translateX(-200%);
+}
+
+#slide1:checked~.labels label:nth-child(1) {
+    width: 45px;
+    background-color: #7ab7fc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#slide2:checked~.labels label:nth-child(2) {
+    width: 45px;
+    background-color: #7ab7fc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5)
+}
+
+#slide3:checked~.labels label:nth-child(3) {
+    width: 45px;
+    background-color: #7ab7fc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5)
+}
+
+.section-slider .hider {
+    position: relative;
+}
+
+.slide .labels {
+    display: flex;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-75px);
+    justify-content: space-between;
+    width: 150px;
+    z-index: 100;
+}
+
+.slide .labels label {
+    transition: 300ms;
+    width: 30px;
+    height: 15px;
+    border-radius: 25px;
+    background-color: #dfdfdf;
+    border: 1px solid #c5c3c3;
+    padding: 5px;
+}
+
+.section-line .item {
+    width: 30%;
+    height: 300px;
+    background-color: #dfdfdf;
+    padding: 10px;
+    
+}
+
+.section-line .item h2 {
+    font-size: 2rem;
+}
+
+.section-line .item p {
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width:900px) {
+    .container {
+        width: 700px;
+    }
+
+    .section-services .item {
+        width: 30%;
+        margin: 20px 0 0 5px;
+    }
+
+    .section-services .container>.row {
+        justify-content: space-around;
+    }
+
+    .section-grid .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-grid .grid .item:nth-last-child(1) {
+        grid-row: 1 / 2;
+        grid-column: 1/2;
+    }
+
+    .section-grid .grid .item:nth-last-child(2) {
+        grid-row: 1/2;
+        grid-column: 2/3
+    }
+
+    .section-grid .grid .item:nth-last-child(3) {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .section-grid .grid .item:nth-last-child(4) {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+
+    .section-line .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-line .item {
+        font-size: 10px;
+        width: 90%;
+        
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 100%;
+    }
+}
